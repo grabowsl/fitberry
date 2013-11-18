@@ -1,0 +1,12 @@
+development:
+  consumer_key: 0217c4f79d53491588cf31f009f1e4eb
+  consumer_secret: 29ec236a17fa42e8a95764240dc9214b
+
+production:
+  consumer_key: 0217c4f79d53491588cf31f009f1e4eb
+  consumer_secret: 29ec236a17fa42e8a95764240dc9214b
+
+demo:
+  consumer_key: f117048491c040d192fdfb875b61e657
+  consumer_secret: 0d7ce6da5b07415ca3c1f6c9b373f15c
+

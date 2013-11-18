@@ -1,0 +1,608 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-18 16:06:11 +0100
+Processing by ActivitiesController#index as HTML
+  [1m[36mChallange Load (6.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't' LIMIT 1[0m
+  [1m[35mBlog Load (6.0ms)[0m  SELECT "blogs".* FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) ORDER BY published_at DESC LIMIT 1
+  [1m[36mChallange Load (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) LIMIT 3) subquery_for_count 
+  [1m[36mUser Load (23.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (5.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE (blog_id=43)
+  Rendered activities/_blognote.html.erb (78.0ms)
+  [1m[36mActivity Load (5.0ms)[0m  [1mSELECT "activities".* FROM "activities" INNER JOIN "challanges" ON "challanges"."id" = "activities"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC LIMIT 5[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 50 LIMIT 1
+  [1m[36mTeam Load (5.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 56 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 60 LIMIT 1
+  [1m[36mTeam Load (1.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 48 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 59 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  Rendered activities/_famehall.html.erb (58.0ms)
+  [1m[36mChallange Load (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't'[0m
+  [1m[35mChallange Load (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."finished" = 't' ORDER BY created_at DESC
+  [1m[36mMilestone Load (5.0ms)[0m  [1mSELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number[0m
+  Rendered activities/_challange.html.erb (27.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/bundler/gems/Google-Maps-for-Rails-3ff52deb455e/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" INNER JOIN "challanges" ON "challanges"."id" = "teams"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  Rendered activities/_map.html.erb (53.0ms)
+Compiled excanvas.js  (0ms)  (pid 9680)
+  Rendered activities/_teams.html.erb (33.0ms)
+  Rendered activities/index.html.erb within layouts/application (300.0ms)
+Compiled layout.css  (118ms)  (pid 9680)
+Compiled fonts.css  (17ms)  (pid 9680)
+Compiled splitbar.css  (32ms)  (pid 9680)
+Compiled formtastic.css  (0ms)  (pid 9680)
+Compiled register.css  (13ms)  (pid 9680)
+Compiled gmaps4rails.css  (0ms)  (pid 9680)
+Compiled jquery.tipsy.css  (0ms)  (pid 9680)
+Compiled jquery.simplemodal.css  (0ms)  (pid 9680)
+Compiled jquery.countdown.css  (11ms)  (pid 9680)
+Compiled jquery.easy-pie-chart.css  (0ms)  (pid 9680)
+Compiled application.css  (362ms)  (pid 9680)
+Compiled formtastic_ie7.css  (0ms)  (pid 9680)
+Compiled ie7.css  (19ms)  (pid 9680)
+Compiled jquery.js  (1ms)  (pid 9680)
+Compiled jquery_ujs.js  (0ms)  (pid 9680)
+Compiled layout.js  (1ms)  (pid 9680)
+Compiled jquery.tipsy.min.js  (0ms)  (pid 9680)
+Compiled jquery.countdown.min.js  (0ms)  (pid 9680)
+Compiled jquery.simplemodal.js  (0ms)  (pid 9680)
+Compiled jquery.easy-pie-chart.js  (1ms)  (pid 9680)
+Compiled gmaps4rails/gmaps4rails.base.js  (2414ms)  (pid 9680)
+Compiled gmaps4rails/gmaps4rails.googlemaps.js  (1736ms)  (pid 9680)
+Compiled application.js  (4401ms)  (pid 9680)
+Completed 200 OK in 5504ms (Views: 5281.5ms | ActiveRecord: 80.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:16 +0100
+Served asset /application.css - 304 Not Modified (40ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:16 +0100
+Served asset /layout.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fonts.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /fonts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/splitbar.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /splitbar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /formtastic.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/register.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /register.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.tipsy.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.tipsy.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.simplemodal.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.simplemodal.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.countdown.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.countdown.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.easy-pie-chart.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /layout.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.tipsy.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.tipsy.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.countdown.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.simplemodal.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.simplemodal.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:17 +0100
+Served asset /jquery.easy-pie-chart.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/webfont-regular.woff" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /webfont-regular.woff - 304 Not Modified (16ms)
+
+
+Started GET "/assets/rubber.png" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /rubber.png - 304 Not Modified (10ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /sprites.png - 304 Not Modified (36ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2013-11-18 16:06:18 +0100
+Served asset /background.png - 304 Not Modified (10ms)
+
+
+Started GET "/users/auth/fitbit" for 127.0.0.1 at 2013-11-18 16:06:32 +0100
+
+
+Started GET "/users/auth/fitbit/callback?oauth_token=90faff2b34bea75248be67ce41412dd0&oauth_verifier=m7secr61p9o1ao0qij1946lone" for 127.0.0.1 at 2013-11-18 16:06:36 +0100
+Processing by OmniauthCallbacksController#fitbit as HTML
+  Parameters: {"oauth_token"=>"90faff2b34bea75248be67ce41412dd0", "oauth_verifier"=>"m7secr61p9o1ao0qij1946lone"}
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'fitbit' AND "users"."uid" = '24ZTLH' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-11-15 12:41:10.553618', "current_sign_in_at" = '2013-11-18 15:06:36.839484', "sign_in_count" = 5, "updated_at" = '2013-11-18 15:06:36.841484' WHERE "users"."id" = 14[0m
+  [1m[35m (7.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Processing by ActivitiesController#index as HTML
+  [1m[36mChallange Load (1.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't' LIMIT 1[0m
+  [1m[35mBlog Load (1.0ms)[0m  SELECT "blogs".* FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) ORDER BY published_at DESC LIMIT 1
+  [1m[36mChallange Load (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) LIMIT 3) subquery_for_count 
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE (blog_id=43)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 14 LIMIT 1[0m
+  Rendered activities/_blognote.html.erb (5.0ms)
+  [1m[35mActivity Load (0.0ms)[0m  SELECT "activities".* FROM "activities" INNER JOIN "challanges" ON "challanges"."id" = "activities"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC LIMIT 5
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 50 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 56 LIMIT 1
+  [1m[36mTeam Load (1.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 60 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 59 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  Rendered activities/_famehall.html.erb (13.0ms)
+  [1m[35mChallange Load (1.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't'
+  [1m[36mChallange Load (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."finished" = 't' ORDER BY created_at DESC[0m
+  [1m[35mMilestone Load (1.0ms)[0m  SELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number
+  Rendered activities/_challange.html.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/bundler/gems/Google-Maps-for-Rails-3ff52deb455e/app/views/gmaps4rails/_gmaps4rails.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "challanges" ON "challanges"."id" = "teams"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  Rendered activities/_map.html.erb (7.0ms)
+  Rendered activities/_teams.html.erb (2.0ms)
+  Rendered activities/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 81ms (Views: 42.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/splitbar.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /splitbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/register.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /register.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:37 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tipsy.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.tipsy.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.simplemodal.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.simplemodal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.countdown.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.countdown.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.easy-pie-chart.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /layout.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tipsy.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.tipsy.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.countdown.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.simplemodal.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.simplemodal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /jquery.easy-pie-chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-18 16:06:38 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/webfont-regular.woff" for 127.0.0.1 at 2013-11-18 16:06:39 +0100
+Served asset /webfont-regular.woff - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rubber.png" for 127.0.0.1 at 2013-11-18 16:06:39 +0100
+Served asset /rubber.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-11-18 16:06:39 +0100
+Served asset /sprites.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2013-11-18 16:06:39 +0100
+Served asset /background.png - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-11-18 16:06:44 +0100
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 14 LIMIT 1
+Compiled active_admin.css  (2249ms)  (pid 9680)
+Compiled active_admin/print.css  (125ms)  (pid 9680)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "users" WHERE (town like '%Poznań%')
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" WHERE (town like '%Warszawa%')[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "users" LIMIT 30 OFFSET 0) subquery_for_count 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mChallange Load (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 14 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 14 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 12 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 12 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 14 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 7 ORDER BY distance DESC LIMIT 1
+  [1m[36mChallange Load (1.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 10 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 10 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 10 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 11 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 9 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 9 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 11 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 10 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 9 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 8 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 7 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 7 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 8 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 11 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 8 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 9 LIMIT 1[0m
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/activeadmin-0.6.0/app/views/active_admin/resource/index.html.arb (2888.3ms)
+Completed 200 OK in 2916ms (Views: 2889.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:47 +0100
+Served asset /active_admin.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-11-18 16:06:47 +0100
+Compiled jquery-ui.js  (7ms)  (pid 9680)
+Compiled active_admin/lib/namespace.js  (102ms)  (pid 9680)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (261ms)  (pid 9680)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (384ms)  (pid 9680)
+Compiled active_admin/components/jquery.aa.popover.js  (375ms)  (pid 9680)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (214ms)  (pid 9680)
+Compiled active_admin/pages/application.js  (132ms)  (pid 9680)
+Compiled active_admin/pages/batch_actions.js  (188ms)  (pid 9680)
+Compiled active_admin/application.js  (1783ms)  (pid 9680)
+Compiled active_admin/base.js  (1909ms)  (pid 9680)
+Compiled jquery.geocomplete.min.js  (0ms)  (pid 9680)
+Compiled dropzone.js  (0ms)  (pid 9680)
+Compiled active_admin.js  (1953ms)  (pid 9680)
+Served asset /active_admin.js - 304 Not Modified (2003ms)
+
+
+Started GET "/assets/active_admin/orderable.png" for 127.0.0.1 at 2013-11-18 16:06:50 +0100
+Served asset /active_admin/orderable.png - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:50 +0100
+Served asset /active_admin/print.css - 304 Not Modified (3ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2013-11-18 16:06:55 +0100
+Processing by Admin::DashboardController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 14 LIMIT 1
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/activeadmin-0.6.0/app/views/active_admin/page/index.html.arb (21.0ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:55 +0100
+Served asset /active_admin.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin.js" for 127.0.0.1 at 2013-11-18 16:06:55 +0100
+Served asset /active_admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/active_admin/print.css?body=1" for 127.0.0.1 at 2013-11-18 16:06:56 +0100
+Served asset /active_admin/print.css - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-11-18 16:07:03 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ja1kCQZypwmk4cTjz4QCxcGMZVBHFDj9ywalrc1/MQs="}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 14 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-18 16:07:03 +0100
+Processing by ActivitiesController#index as HTML
+  [1m[35mChallange Load (1.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't' LIMIT 1
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT "blogs".* FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) ORDER BY published_at DESC LIMIT 1[0m
+  [1m[35mChallange Load (1.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT 1 AS count_column FROM "blogs" WHERE (published_at IS NOT NULL and challange_id=10) LIMIT 3) subquery_for_count [0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE (blog_id=43)[0m
+  Rendered activities/_blognote.html.erb (3.0ms)
+  [1m[35mActivity Load (1.0ms)[0m  SELECT "activities".* FROM "activities" INNER JOIN "challanges" ON "challanges"."id" = "activities"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC LIMIT 5
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 50 LIMIT 1[0m
+  [1m[35mTeam Load (1.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 56 LIMIT 1
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 16 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 60 LIMIT 1[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 48 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "teams".* FROM "teams" WHERE "teams"."id" = 13 ORDER BY distance DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 59 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "teams".* FROM "teams" WHERE "teams"."id" = 15 ORDER BY distance DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  Rendered activities/_famehall.html.erb (12.0ms)
+  [1m[35mChallange Load (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."active" = 't'
+  [1m[36mChallange Load (1.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."finished" = 't' ORDER BY created_at DESC[0m
+  [1m[35mMilestone Load (0.0ms)[0m  SELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number
+  Rendered activities/_challange.html.erb (4.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/bundler/gems/Google-Maps-for-Rails-3ff52deb455e/app/views/gmaps4rails/_gmaps4rails.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "milestones".* FROM "milestones" WHERE "milestones"."challange_id" = 10 ORDER BY number[0m
+  [1m[35mTeam Load (0.0ms)[0m  SELECT "teams".* FROM "teams" INNER JOIN "challanges" ON "challanges"."id" = "teams"."challange_id" WHERE (challanges.id=10) ORDER BY distance DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "challanges".* FROM "challanges" WHERE "challanges"."id" = 10 LIMIT 1[0m
+  Rendered activities/_map.html.erb (7.0ms)
+  Rendered activities/_teams.html.erb (1.0ms)
+  Rendered activities/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 61ms (Views: 45.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:03 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fonts.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /fonts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/splitbar.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /splitbar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/register.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /register.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tipsy.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.tipsy.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.simplemodal.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.simplemodal.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.countdown.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.countdown.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.css?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.easy-pie-chart.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /layout.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.tipsy.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.tipsy.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.countdown.min.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.countdown.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.simplemodal.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.simplemodal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.easy-pie-chart.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /jquery.easy-pie-chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:04 +0100
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/webfont-regular.woff" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /webfont-regular.woff - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rubber.png" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /rubber.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /sprites.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/background.png" for 127.0.0.1 at 2013-11-18 16:07:05 +0100
+Served asset /background.png - 304 Not Modified (0ms)
