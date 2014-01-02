@@ -33,6 +33,18 @@ class CronTask
 
 	def devices
 		User.active.each { |u| puts "synchronizing devices: #{u.name}"; u.synchronize_devices; sleep 1 }
-	end
+  end
+
+  def self.before_perform(*args)
+    puts "About to perform #{self} job with #{args.inspect}"
+
+    # do not run stats synchronization if there are no any challanges in progress
+    if args.first.eql? "stats"
+      if Challange.in_progress.size < 1
+        puts "Skipping job, no challenges in progress found"
+        raise Resque::Job::DontPerform
+      end
+    end
+  end
 
 end
