@@ -8,6 +8,7 @@ class Challange < ActiveRecord::Base
 
   scope :past, where(:finished => true).order("created_at DESC")
   scope :active, where(:active => true)
+  scope :in_progress, active.where("deadline >= ?", Time.now)
 
 	def htmlize
 		self.htmlized = RedCloth.new(self.description).to_html.gsub(/\n/, '')
