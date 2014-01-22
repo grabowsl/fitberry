@@ -10,7 +10,7 @@ class ChallangesController < ApplicationController
       current.update_attributes({:active => false, :finished => true})
     end
 
-    active.update_attributes(:active => true)
+    active.update_attributes({:active => true, :finished => false})
 
     # create empty activities for users who didn't synchronized their fitbits yet
     User.active.each {|user| Activity.create(:user => user, :challange => active) if user.activities.empty?}
