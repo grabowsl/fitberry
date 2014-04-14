@@ -16,3 +16,9 @@
 
 # RybyMine/IDEA specific configuration
 .idea/*
+
+# precompiled assets
+/public/assets/*
+
+# bundler deployment data
+/vendor/bundle/*
