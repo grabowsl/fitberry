@@ -18,6 +18,11 @@ class Activity < ActiveRecord::Base
   end
 
   def update_from_fitbit(fb_data)
+    puts "lifetime distance: #{fb_data['distance']}"
+    puts "lifetime steps: #{fb_data['steps']}"
+    puts "base distance: #{user.base_distance}"
+    puts "base steps: #{user.base_steps}"
+
     update_attributes(:calories_out => (fb_data['caloriesOut'] - user.base_calories),
                       :distance => (fb_data['distance'] - user.base_distance).round(2),
                       :steps => (fb_data['steps'] - user.base_steps))

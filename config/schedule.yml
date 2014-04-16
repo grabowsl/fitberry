@@ -1,5 +1,5 @@
 stats:
-  cron: "00 0-10,12-23 * * *"
+  cron: "0 */3 * * *"
   queue: cron
   class: CronTask
   args: "stats"
@@ -7,9 +7,9 @@ stats:
   rails_envs: development, production, staging
 
 devices:
-  cron: "00 11 * * *"
+  cron: "30 0,6 * * *"
   queue: cron
   class: CronTask
   args: "devices"
-  description: Fetches devices info
+  description: Fetches FitBit devices info
   rails_envs: development, production, staging
