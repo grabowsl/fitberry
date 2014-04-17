@@ -49,6 +49,8 @@ class User < ActiveRecord::Base
 
   def synchronize_devices
     devices = client.devices
+    puts "number of client devices: #{devices.size}"
+    puts "client first device: #{devices.first}"
     update_attribute(:last_sync_date, DateTime.strptime(devices.first['lastSyncTime'], "%Y-%m-%dT%T.%L")) unless devices.blank?
   end
 
