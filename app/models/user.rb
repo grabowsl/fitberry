@@ -48,6 +48,7 @@ class User < ActiveRecord::Base
   end
 
   def synchronize_devices
+    puts "in synchronize_devices"
     devices = client.devices
     puts "number of client devices: #{devices.size}"
     puts "client first device: #{devices.first}"
