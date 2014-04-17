@@ -32,7 +32,7 @@ class CronTask
 	end
 
 	def devices
-		User.active.each { |u| puts "synchronizing devices: #{u.name}"; u.test_method; sleep 1 }
+		User.active.each { |u| puts "synchronizing devices: #{u.name}"; u.synchronize_devices; sleep 1 }
   end
 
   def self.before_perform(*args)
