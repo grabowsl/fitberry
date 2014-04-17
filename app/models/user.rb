@@ -47,6 +47,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def test_method
+    print "in synchronize_devices 1"
+    puts "in synchronize_devices 1"
+    devices = client.devices
+    print "in synchronize_devices 2"
+    puts "in synchronize_devices 2"
+    puts "number of client devices: #{devices.size}"
+    puts "client first device: #{devices.first}"
+  end
+
   def synchronize_devices
     puts "in synchronize_devices"
     devices = client.devices
