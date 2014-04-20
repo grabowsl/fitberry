@@ -49,10 +49,10 @@ class User < ActiveRecord::Base
 
   def synchronize_devices
     devices = client.devices
-    if devices.first['lastSyncTime']
-      update_attribute(:last_sync_date, DateTime.strptime(devices.first['lastSyncTime'], "%Y-%m-%dT%T.%L")) unless devices.blank?
-    else
+    if devices[0].include? "error"
       puts "Skipping sync, the following error occurred: #{devices}"
+    else
+      update_attribute(:last_sync_date, DateTime.strptime(devices.first['lastSyncTime'], "%Y-%m-%dT%T.%L")) unless devices.blank?
     end
   end
 
