@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
 
   def synchronize_devices
     devices = client.devices
-    if devices && devices.is_a?(Array)
+    if devices && !devices.empty?
       if devices[0].include? "error"
         puts "Skipping sync, the following error occurred: #{devices}"
       else
