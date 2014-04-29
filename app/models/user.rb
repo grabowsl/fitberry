@@ -49,12 +49,14 @@ class User < ActiveRecord::Base
 
   def synchronize_devices
     devices = client.devices
-    if devices && !devices.empty?
+    if devices && devices.size > 0
       if devices[0].include? "error"
         puts "Skipping sync, the following error occurred: #{devices}"
       else
         update_attribute(:last_sync_date, DateTime.strptime(devices.first['lastSyncTime'], "%Y-%m-%dT%T.%L")) unless devices.blank?
       end
+    else
+      puts "User has no devices configured"
     end
   end
 
