@@ -14,6 +14,7 @@ class Activity < ActiveRecord::Base
     if (record = active.where(:user_id => user.id).first).nil?
       record = new(:user => user, :challange => Challange.active.first)
     end
+    puts "found user #{record}"
     return record
   end
 
