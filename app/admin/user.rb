@@ -32,6 +32,9 @@ ActiveAdmin.register User do
         row("About") { user.about }
         row("Department") { user.department }
         row("Role") { user.role }
+        row("Base distance") { user.base_distance }
+        row("Base steps") { user.base_steps }
+        row("Base calories") { user.base_calories }
       end
     end
   end
@@ -62,7 +65,12 @@ ActiveAdmin.register User do
       f.input :department, :as => :select, :collection => ["IT", "HR", "ADMD", "non-ADMD"], :required => true
       f.input :role, :as => :select, :collection => ["Manager", "Specialist", "Other"], :required => true, :label => "Role"
 			f.input :is_admin
-		end
+    end
+    f.inputs "Baselines" do
+      f.input :base_distance, :label => "Distance"
+      f.input :base_steps, :label => "Steps"
+      f.input :base_calories, :label => "Calories"
+    end
     f.actions                         
   end                                 
 end                                   
