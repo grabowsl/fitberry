@@ -16,14 +16,6 @@ GIT
       multi_json (~> 1.0)
 
 GIT
-  remote: https://github.com/gardentree/omniauth-fitbit.git
-  revision: cb62f581dcc8f94b355d2533ab2d871193f4c04c
-  specs:
-    omniauth-fitbit (1.0.0)
-      multi_xml
-      omniauth-oauth (~> 1.0)
-
-GIT
   remote: https://github.com/jnicklas/capybara.git
   revision: 9b2fb895225ac97d510faa60a843ad4c911be9c3
   specs:
@@ -40,13 +32,6 @@ GIT
   specs:
     guard-ctags-bundler (0.1.6)
       guard (>= 1.1)
-
-GIT
-  remote: https://github.com/whazzmaster/fitgem.git
-  revision: 5f8bf28abd045cb12cbb7add1beb6593132513f7
-  specs:
-    fitgem (0.8.0)
-      oauth
 
 GEM
   remote: http://rubygems.org/
@@ -157,6 +142,8 @@ GEM
       eventmachine (>= 0.12.0)
     ffi (1.4.0)
     ffi (1.4.0-x86-mingw32)
+    fitgem (0.10.0)
+      oauth
     formtastic (2.2.1)
       actionpack (>= 3.0)
     gherkin (2.11.6)
@@ -219,9 +206,12 @@ GEM
     nokogiri (1.5.6)
     nokogiri (1.5.6-x86-mingw32)
     oauth (0.4.7)
-    omniauth (1.1.4)
-      hashie (>= 1.2, < 3)
-      rack
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
+    omniauth-fitbit (1.0.4)
+      multi_xml
+      omniauth-oauth (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -367,7 +357,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
-  fitgem!
+  fitgem (>= 0.10.0)
   formtastic
   gmaps4rails!
   guard-ctags-bundler!
@@ -375,7 +365,7 @@ DEPENDENCIES
   jquery-rails
   meta_request (= 0.2.0)
   meta_search (>= 1.1.0.pre)
-  omniauth-fitbit!
+  omniauth-fitbit (>= 1.0.4)
   paperclip (~> 3.0)
   passenger (>= 4.0.0.rc4)
   pg

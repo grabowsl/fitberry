@@ -3,14 +3,14 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
 
-gem 'fitgem', :git => 'https://github.com/whazzmaster/fitgem.git'
+gem 'fitgem', '>= 0.10.0'
 
 gem 'redis'
 gem 'resque', :require => 'resque/server'
 gem 'resque-scheduler'
 
 gem 'devise'
-gem 'omniauth-fitbit', :git => 'https://github.com/gardentree/omniauth-fitbit.git'
+gem 'omniauth-fitbit', '>= 1.0.4'
 gem 'formtastic'
 gem 'rabl'
 
