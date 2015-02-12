@@ -2,7 +2,7 @@
 
 <table class="menu">
 <% @activities.each_with_index do |activity, index| %>
-    <% if activity.user.team %>
+    <% if activity.user %>
         <tr>
           <td><a href="#" class="member <%= index > 4 ? 'low' : 'high' %>" data-user="<%= activity.user.id %>"><%= activity.user.name %></a></td>
           <td><span class="team"><%= activity.user.team.name %></span></td>
